@@ -12,16 +12,17 @@
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-md-4" *ngFor="let film of myFilms | async">
+        <div class="col-md-4" *ngFor="let news of allnews">
           <div class="card mb-4 box-shadow">
-            <img class="card-img-top" [src]="film.Poster" alt="Card image cap">
+            <img class="card-img-top" [src]="news.Poster" alt="Card image cap">
             <div class="card-body">
-              <p class="card-text">{{film.Plot}}</p>
+              <h5 class="card-title">{{news.Title}}</h5>
+              <p class="card-text">{{news.Plot}}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                 </div>
-                <small class="text-muted">9 mins</small>
+                <small class="text-muted">{{news.Released}}</small>
               </div>
             </div>
           </div>
